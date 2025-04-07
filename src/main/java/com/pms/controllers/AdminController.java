@@ -12,7 +12,7 @@ import com.pms.pojos.Authenticate;
 import com.pms.services.AdminUserServiceImpl;
 
 @RestController
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin
 @RequestMapping("/api")
 public class AdminController {
 
