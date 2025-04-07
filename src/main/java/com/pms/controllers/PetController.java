@@ -19,7 +19,7 @@ import com.pms.pojos.Pet;
 import com.pms.services.PetServiceImpl;
 
 @RestController
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin
 @RequestMapping("/api")
 public class PetController {
 
