@@ -19,7 +19,7 @@ import com.pms.pojos.Orders;
 import com.pms.services.OrdersServiceImpl;
 
 @RestController
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin
 @RequestMapping("/api")
 public class OrdersController {
 
