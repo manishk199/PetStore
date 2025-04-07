@@ -19,7 +19,7 @@ import com.pms.pojos.Cart;
 import com.pms.services.CartServiceImpl;
 
 @RestController
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin
 @RequestMapping("/api")
 public class CartController {
 
