@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: CMMS
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://dpg-cvprcgh5pdvs73eea9kg-a/petdb_grx4
+    username: petdb_grx4_user
+    password: gaeJJtWmV29pd2PvM0F2kuqFLgGbF7bz
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone=UTC+5:30
+
+
+
+
