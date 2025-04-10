@@ -41,7 +41,9 @@ public class PetController {
 			return petService.findByPetCategoryRefId(Integer.parseInt(petCategoryId));
 	
 		}catch(Exception e){
-			e.printStackTrace();}
+			e.printStackTrace();
+			return new ArrayList<>();
+		}
 	}
 	
 	//get pet By Id
