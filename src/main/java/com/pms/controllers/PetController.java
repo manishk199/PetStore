@@ -37,7 +37,11 @@ public class PetController {
 	@GetMapping("/pets/category/{petCategoryId}")
 	public List<Pet> getPetByCategoryId(@PathVariable String petCategoryId) 
 	{
+		try{
 			return petService.findByPetCategoryRefId(Integer.parseInt(petCategoryId));
+	
+		}catch(Exception e){
+			e.printStackTrace();}
 	}
 	
 	//get pet By Id
