@@ -35,18 +35,14 @@ public class PetController {
 	
 	//get pet By Id
 	@GetMapping("/pets/category/{petCategoryId}")
-public ResponseEntity<List<Pet>> getPetByCategoryId(@PathVariable String petCategoryId) {
-    try {
-        int categoryId = Integer.parseInt(petCategoryId);
-        List<Pet> pets = petService.findByPetCategoryRefId(categoryId);
-        return ResponseEntity.ok(pets);
-    } catch (NumberFormatException e) {
-        return ResponseEntity.badRequest().body(new ArrayList<>());
-    } catch (Exception e) {
-        e.printStackTrace(); // Ideally use a logger here
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ArrayList<>());
-    }
+public List<Pet> getPetByCategoryId(@PathVariable String petCategoryId) { 
+	
+	return petService.findByPetCategoryRefId(Integer.parseInt(petCategoryId));
+
+
 }
+
+
 	
 	//get pet By Id
 	@GetMapping("/pets/{petId}")
