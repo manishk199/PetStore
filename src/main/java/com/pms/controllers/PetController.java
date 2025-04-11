@@ -35,12 +35,15 @@ public class PetController {
 	
 	//get pet By Id
 	@GetMapping("/pets/category/{petCategoryId}")
-public List<Pet> getPetByCategoryId(@PathVariable String petCategoryId) { 
-	
-	return petService.findByPetCategoryRefId(Integer.parseInt(petCategoryId));
+	public List<Pet> getPetByCategoryId(@PathVariable String petCategoryId) { 
+		try{
+			return petService.findByPetCategoryRefId(Integer.parseInt(petCategoryId));
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 
 
-}
+	}
 
 
 	
