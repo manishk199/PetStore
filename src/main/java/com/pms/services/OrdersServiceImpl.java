@@ -11,7 +11,9 @@ import com.pms.dao.OrdersRepository;
 import com.pms.exceptions.ErrorInSavingException;
 import com.pms.exceptions.NotFoundException;
 import com.pms.pojos.Orders;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 @Service
 public class OrdersServiceImpl implements IOrdersService {
 
