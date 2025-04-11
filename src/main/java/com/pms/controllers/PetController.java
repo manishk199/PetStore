@@ -1,5 +1,6 @@
 package com.pms.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,17 +36,16 @@ public class PetController {
 	
 	//get pet By Id
 	@GetMapping("/pets/category/{petCategoryId}")
-	public List<Pet> getPetByCategoryId(@PathVariable String petCategoryId) { 
-		try{
+	public List<Pet> getPetByCategoryId(@PathVariable String petCategoryId) 
+	{
+		try {
 			return petService.findByPetCategoryRefId(Integer.parseInt(petCategoryId));
-		}catch(Exception e){
+		}catch(Exception e) {
 			e.printStackTrace();
+			List<Pet> list = new ArrayList<>();
+			return list;
 		}
-
-
 	}
-
-
 	
 	//get pet By Id
 	@GetMapping("/pets/{petId}")
