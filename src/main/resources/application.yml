@@ -3,9 +3,9 @@ spring:
     name: CMMS
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://dpg-cvprcgh5pdvs73eea9kg-a/petdb_grx4
-    username: petdb_grx4_user
-    password: gaeJJtWmV29pd2PvM0F2kuqFLgGbF7bz
+    url: jdbc:postgresql://caboose.proxy.rlwy.net:47617/railway
+    username: postgres
+    password: BPvGtsoDjFlUHAqEXTzwZQuWFccnbwOx
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
